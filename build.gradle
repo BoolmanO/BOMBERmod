@@ -1,0 +1,48 @@
+apply plugin: "java"
+
+targetCompatibility = 8
+sourceCompatibility = 8
+
+sourceSets.main.java.srcDirs = ["src\\"]
+sourceSets.main.resources.srcDirs = ["assets\\"]
+
+ext {
+    modName = "BomberMod"
+    filePath = "out"
+    fileNameD = "Descktop"
+    fileNameA = "Android"
+    fileExt = "jar"
+    fileVersion = "0.1a"
+
+    arcVersion = "25cb58c"
+    midustryVersion = "dd9bba8"
+}
+
+allprojects{
+    tasks.withType(JavaCompile){
+        options.compilerArgs.addAll(['--release', '8'])
+    }
+}
+
+repositories{
+    mavenCentral()
+    maven{ url 'https://www.jitpack.io' }
+}
+
+wrapper {
+
+}
+
+dependencies{
+    compileOnly "com.github.Anuken.MindustryJitpack:core:${midustryVersion}"
+    compileOnly "com.github.Anuken.Arc:arc-core:${arcVersion}"
+}
+
+jar{
+    //archiveFileName = "${filePath}\\${modName}${fileNameD}-${fileVersion}.${fileExt}"
+    archiveFileName = "C:\\Users\\Никита\\AppData\\Roaming\\Mindustry\\mods\\${modName}${fileNameD}-${fileVersion}.${fileExt}"
+
+    from(rootDir){
+        include "mod.hjson"
+    }
+}

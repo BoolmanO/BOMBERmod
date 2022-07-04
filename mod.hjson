@@ -1,0 +1,8 @@
+name: "BomberMod"
+displayName: "Boooombeers"
+author: "main developer: [white]ne[blue]kit[red]508"
+main: "core.Mod"
+description: ""
+version: 0.1a
+minGameVersion: 136
+dependencies: []
