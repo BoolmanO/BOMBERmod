@@ -40,7 +40,7 @@ dependencies{
 
 jar{
     //archiveFileName = "${filePath}\\${modName}${fileNameD}-${fileVersion}.${fileExt}"
-    archiveFileName = "C:\\Users\\Никита\\AppData\\Roaming\\Mindustry\\mods\\${modName}${fileNameD}-${fileVersion}.${fileExt}"
+    //archiveFileName = "C:\\Users\\Никита\\AppData\\Roaming\\Mindustry\\mods\\${modName}${fileNameD}-${fileVersion}.${fileExt}"
 
     from(rootDir){
         include "mod.hjson"
