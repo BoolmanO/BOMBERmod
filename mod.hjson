@@ -1,8 +1,8 @@
 name: "BomberMod"
-displayName: "Boooombeers"
+displayName: "Bombers mod"
 author: "main developer: [white]ne[blue]kit[red]508"
 main: "core.Mod"
-description: ""
-version: 0.1a
+description: "Mod adds bomber unit tree."
+version: 1b
 minGameVersion: 136
 dependencies: []

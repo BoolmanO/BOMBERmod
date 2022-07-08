@@ -79,7 +79,7 @@ public class Content {
 
     public static void load(){
         seagull = new UnitType("seagull"){{
-            health = 200;
+            health = 250;
             speed = 15f*8f/60f;
             accel = 0.08f;
             drag = 0.02f;
@@ -108,7 +108,7 @@ public class Content {
                 shootSound = Sounds.none;
                 shoot.shots = 4;
                 shoot.shotDelay = 0.1f * 60f;
-                bullet = new BombBulletType(7f, Vars.tilesize * 3f){{
+                bullet = new BombBulletType(10f, Vars.tilesize * 3f){{
                     width = 4f;
                     height = 4f;
                     hitEffect = gullBombExplosion;
