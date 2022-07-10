@@ -12,7 +12,7 @@ ext {
     fileNameD = "Descktop"
     fileNameA = "Android"
     fileExt = "jar"
-    fileVersion = "1b"
+    fileVersion = "1.0"
 
     arcVersion = "25cb58c"
     midustryVersion = "dd9bba8"
