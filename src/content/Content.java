@@ -27,6 +27,7 @@ import mindustry.type.Weapon;
 import mindustry.type.ammo.ItemAmmoType;
 import mindustry.world.Block;
 import mindustry.world.Tile;
+import mindustry.world.blocks.defense.turrets.ItemTurret;
 import mindustry.world.blocks.units.Reconstructor;
 import mindustry.world.blocks.units.UnitFactory;
 import mindustry.world.meta.BlockFlag;
@@ -38,7 +39,7 @@ import static mindustry.type.ItemStack.with;
 
 public class Content {
     public static UnitType seagull, gull, sparrow, owl, tu;
-    public static Block bomberFactory, bomberUpgraderT1, bomberUpgraderT2, bomberUpgraderT3, bomberUpgraderT4;
+    public static Block bomberFactory, bomberUpgraderT1, bomberUpgraderT2, bomberUpgraderT3, bomberUpgraderT4, aat1;
 
     public static Effect gullBombExplosion = new Effect(20, (e) -> {
         Draw.color(Pal.bulletYellow);
@@ -421,6 +422,18 @@ public class Content {
             upgrades.addAll(
                     new UnitType[]{owl, tu}
             );
+        }};
+
+        aat1 = new ItemTurret("aa-t1"){{
+            health = 500;
+            size = 2;
+
+            hasItems = true;
+            itemCapacity = 20;
+
+
+
+            requirements(Category.defense, with(Items.copper, 35));
         }};
     }
 }
